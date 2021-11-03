@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { API_KEY, BASE_URL } from '../../service/api';
@@ -28,3 +29,7 @@ export default function Reviews({ movieId }) {
     </ul>
   );
 }
+
+Reviews.propTypes = {
+  movieId: PropTypes.array.isRequired,
+};

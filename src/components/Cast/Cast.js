@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
+
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
 import { API_KEY, BASE_URL } from '../../service/api';
 
 export default function Cast({ movieId }) {
@@ -30,3 +31,7 @@ export default function Cast({ movieId }) {
     </ul>
   );
 }
+
+Cast.propTypes = {
+  movieId: PropTypes.object.isRequired,
+};
