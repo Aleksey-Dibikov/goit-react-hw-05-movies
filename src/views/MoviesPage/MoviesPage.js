@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import s from './MoviesPage.module.css';
 
 function MoviesPage({ onSubmit }) {
   const [value, setValue] = useState('');
+
+  useEffect(() => {});
 
   const handleInputChange = event => {
     setValue(event.currentTarget.value.toLowerCase());
