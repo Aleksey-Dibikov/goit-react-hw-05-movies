@@ -23,7 +23,7 @@ function MoviesPage() {
     if (!inputValue && queryUrl) {
       axios
         .get(
-          `${BASE_URL}search/movie${API_KEY}&language=en-US&page=1&include_adult=false&query=${queryUrl}`,
+          `${BASE_URL}search/movie${API_KEY}&language=en-US&page=1&include_adult=false&query=${findFilm}`,
         )
         .then(resp => setFilms(resp.data.results))
         .then(
@@ -36,7 +36,7 @@ function MoviesPage() {
     } else
       axios
         .get(
-          `${BASE_URL}search/movie${API_KEY}&language=en-US&page=1&include_adult=false&query=${queryUrl}`,
+          `${BASE_URL}search/movie${API_KEY}&language=en-US&page=1&include_adult=false&query=${findFilm}`,
         )
         .then(res => setFilms(res.data.results))
         .then(
